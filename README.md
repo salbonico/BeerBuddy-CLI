@@ -1,6 +1,6 @@
 # BeerBuddy::CLI
 
-Imagine, a buddy that always knows the best beers and where to get them, wherever you happen to be. Now imagine it's a Ruby Gem.
+Imagine, a buddy that always knows the best beers and where to get them, wherever you happen to be. Now imagine they're a Ruby Gem.
 
 BeerBuddy pulls from the fine work being done over at TapHunter.com.
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-Let your BeerBuddy know whether your looking for beers or locations where there a beers by choosing from the numbered list. From there, choose the type of beer you want, IPA's of course being the best option, but it's really up to you I suppose. You can of course leave it blank for all of the beers which is also highly recommended. BeerBuddy will list off some great choices, type in the number to the left of the location or beer that you have a good feeling about and hit enter. BeerBuddy will hook you up with either a list of beers on tap from that location or a list of locations that serve that beer. You can just keep falling down the best rabbit hole ever by continuing to select from the lists or you can type menu at any time to jump back to the beginning.
+Let your BeerBuddy know whether your looking for beers or locations where there's great beers by choosing from the numbered list. From there, choose the type of beer you want, IPA's of course being the best option, but it's really up to you I suppose. You can of course leave it blank for all of the beers which is also highly recommended. BeerBuddy will list off some great choices, type in the number to the left of the location or beer that you have a good feeling about and hit enter. BeerBuddy will hook you up with either a list of beers on tap from that location or a list of locations that serve that beer. You can just keep falling down the best rabbit hole ever by continuing to select from the lists or you can type menu at any time to jump back to the beginning.
 
 Happy Beering! And remember, an Uber is always cheeper than a DUI.  
 
@@ -30,7 +30,7 @@ Happy Beering! And remember, an Uber is always cheeper than a DUI.
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org). Development is done best while at the Gilman Brewery in Berkeley CA. 
 
 ## Contributing
 
@@ -42,4 +42,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the BeerBuddy::CLI project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'salbonico'/BeerBuddy-CLI/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the BeerBuddy::CLI project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'salbonico'/BeerBuddy-CLI/blob/master/CODE_OF_CONDUCT.md). Also, you must agree that sour beers are really just lemonaid in a beer costume.
