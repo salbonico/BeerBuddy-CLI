@@ -1,5 +1,7 @@
 class location
-@@all?
+@@all = []
+
+attr_accessor :name :type :distance
 
 
 
