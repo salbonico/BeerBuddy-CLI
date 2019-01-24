@@ -1,7 +1,7 @@
-class location
+class Location
 @@all = []
 
-attr_accessor :name :type :distance :location
+attr_accessor :name,:type,:distance,:location
 
 
 

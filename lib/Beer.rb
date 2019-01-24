@@ -1,7 +1,7 @@
 class Beer
 @@all =[]
 
-attr_accessor :name :type :apv :ibu :brewer :description :link_to_tocation
+attr_accessor :name,:type,:apv,:ibu,:brewer,:description,:link_to_tocation
 
 def initialize(input)
 @name = input[:name]
