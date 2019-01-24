@@ -1,6 +1,6 @@
 # BeerBuddy::CLI
 
-Imagine, a buddy that always knows the best beers and where to get them, wherever you happen to be. Now imagine he's a Ruby Gem.
+Imagine, a buddy that always knows the best beers and where to get them, wherever you happen to be. Now imagine it's a Ruby Gem.
 
 BeerBuddy pulls from the fine work being done over at TapHunter.com.
 
