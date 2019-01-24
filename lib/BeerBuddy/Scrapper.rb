@@ -1,0 +1,8 @@
+class Scrapper
+@@all
+
+
+
+
+
+end

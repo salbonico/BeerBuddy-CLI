@@ -1,0 +1,6 @@
+class Beer
+@@all 
+
+
+
+end
