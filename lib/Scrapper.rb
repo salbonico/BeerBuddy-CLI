@@ -8,7 +8,16 @@ class Scrapper
    doc = Nokogiri::HTML(html)
    output_of_hashes = []
 
-   test_scrape = doc.css("p:nth-child(2) span:nth-child(2)").text
+   test_scrape = []
+   doc.css("h4 a").each do |url|
+   test_scrape << url.attribute("href")
+   end
+
+  second_test= []
+
+   test_scrape.each do |thing|
+   second_test << thing.value
+ end
 
 #beer name scrape
 imported_names = []
