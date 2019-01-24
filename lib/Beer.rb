@@ -10,7 +10,7 @@ def initialize(input)
 @ibu = input[:ibu]
 @brewer = input[:brewer]
 @description = input[:description]
-@link_to_tocation = input[:link_to_tocation]
+@link_to_tocation = input[:link_to_location]
 
 @@all << self
 end
