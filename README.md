@@ -1,8 +1,8 @@
 # BeerBuddy::CLI
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/BeerBuddy/CLI`. To experiment with that code, run `bin/console` for an interactive prompt.
+Imagine, a buddy that always knows the best beers and where to get them, wherever you happen to be. Now imagine he's a Ruby Gem.
 
-TODO: Delete this and the text above, and describe your gem
+BeerBuddy pulls from the fine work being done over at TapHunter.com.
 
 ## Installation
 
@@ -22,7 +22,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Let your BeerBuddy know whether your looking for beers or locations where there a beers by choosing from the numbered list. From there, choose the type of beer you want, IPA's of course being the best option, but it's really up to you I suppose. You can of course leave it blank for all of the beers which is also highly recommended. BeerBuddy will list off some great choices, type in the number to the left of the location or beer that you have a good feeling about and hit enter. BeerBuddy will hook you up with either a list of beers on tap from that location or a list of locations that serve that beer. You can just keep falling down the best rabbit hole ever by continuing to select from the lists or you can type menu at any time to jump back to the beginning.
+
+Happy Beering! And remember, an Uber is always cheeper than a DUI.  
 
 ## Development
 
