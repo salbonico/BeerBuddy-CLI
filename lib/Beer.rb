@@ -41,6 +41,12 @@ display_index = index + 1
 puts "#{display_index}) #{@@all[index].name} -- #{@@all[index].type}"
 index += 1
 end
+puts "Choose a number by the beer you want to learn more about!"
+input = gets.strip.to_i
+if input > 0 && input <11
+Beer.display_beer_details(input)
+else Beer.display_beers
+end
 end
 
 def self.display_beer_details(index)
@@ -50,6 +56,30 @@ puts "#{selected_beer.name}"
 puts "#{selected_beer.type} by #{selected_beer.brewer}"
 puts "#{selected_beer.apv} #{selected_beer.ibu}"
 puts "#{selected_beer.description}"
+puts ""
+puts "--------------------------"
+puts "1) Back to list of beers."
+puts "2) Enter a new location."
+puts "3) Exit"
+input = gets.strip.to_i
+ if input == 1
+   Beer.display_beers
+ elsif input == 2
+   Beer.activate_buddy
+ elsif input == 3
+   puts "Bye buddy!"
+else
+  Beer.display_beers
+end
+end
+
+def self.activate_buddy
+  puts "Hey buddy! Where are you? Enter a zip or town."
+  location = gets.strip
+  url = Beer.create_url(location)
+  Beer.create_beers_by_url(url)
+  Beer.display_beers
+
 end
 
 end
