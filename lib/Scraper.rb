@@ -3,12 +3,12 @@ require_relative '../config/environment'
 class Scrapper
 
 
-  def self.scrape_beers(index_url)
-   html = open(index_url)
+   def self.scrape_beers(url)
+   html = open(url)
    doc = Nokogiri::HTML(html)
    output_of_hashes = []
 
-   test_scrape = []
+
 
 
 #beer name scrape
@@ -71,16 +71,47 @@ imported_names.each.with_index do |name,index|
   output_of_hashes << hash_entry
 end
 
-   binding.pry
+end
+
+def self.scrape_locations(url)
+  html = open(url)
+  doc = Nokogiri::HTML(html)
+  output_of_hashes = []
+
+  test_scrape = doc.css("div .media-body p:not(.separated):not(.offer)")
+
+
+
+
+
+
+
+
+#location name scrape
+  imported_loc_names = []
+  doc.css("h4").each do |name|
+  imported_loc_names << name.text
+end
+
+#location description scrape
+  imported_loc_descriptions = []
+  doc.css("div .media-body p:not(.separated):not(.offer)").each do |description|
+  imported_loc_descriptions << description.text 
+end
+
+binding.pry
 end
 
 
 
+
+
+
 ##testing url for beers
-self.scrape_beers("https://www.taphunter.com/search/?type=beers&near=94611")
+#self.scrape_beers("https://www.taphunter.com/search/?type=beers&near=94611")
 beer_test_url = "https://www.taphunter.com/search/?type=beers&near=94611"
 ##testing url for locations
+
 location_test_url = "https://www.taphunter.com/search/?type=locations&near=94611"
-
-
+self.scrape_locations("https://www.taphunter.com/search/?type=locations&near=94611")
 end
