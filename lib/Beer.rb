@@ -25,7 +25,7 @@ end
 
 
 def self.create_beers_by_url(url)
-  @@all.clear
+  self.all.clear
   input_hash = Scraper.scrape_beers(url)
   6.times {input_hash.pop}
   input_hash.each do |hash|
@@ -35,11 +35,21 @@ def self.create_beers_by_url(url)
 end
 
 def self.display_beers
-@@all.each.with_index do |beer,index|
+index = 0
+until index == 10
 display_index = index + 1
-puts "#{display_index}) #{beer.name} -- #{beer.type}"
+puts "#{display_index}) #{@@all[index].name} -- #{@@all[index].type}"
+index += 1
+end
 end
 
+def self.display_beer_details(index)
+index -= 1
+selected_beer = @@all[index]
+puts "#{selected_beer.name}"
+puts "#{selected_beer.type} by #{selected_beer.brewer}"
+puts "#{selected_beer.apv} #{selected_beer.ibu}"
+puts "#{selected_beer.description}"
 end
 
 end
