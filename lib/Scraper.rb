@@ -9,7 +9,7 @@ class Scrapper
    output_of_hashes = []
 
    test_scrape = []
-   
+
 
 #beer name scrape
 imported_names = []
@@ -59,8 +59,21 @@ full_url_scrap.each do |hash|
 imported_link_to_locations << hash.value
 end
 
+imported_names.each.with_index do |name,index|
+  hash_entry = {}
+  hash_entry[:name] = name
+  hash_entry[:type] = imported_types[index]
+  hash_entry[:apv] = imported_apvs[index]
+  hash_entry[:ibu] = imported_ibus[index]
+  hash_entry[:brewer] = imported_brewers[index]
+  hash_entry[:description] = imported_descriptions[index]
+  hash_entry[:link_to_location] = imported_link_to_locations[index]
+  output_of_hashes << hash_entry
+end
+
    binding.pry
 end
+
 
 
 ##testing url for beers

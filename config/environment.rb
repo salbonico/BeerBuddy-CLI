@@ -6,5 +6,5 @@ require 'open_uri_redirections'
 
 require './lib/Beer.rb'
 require './lib/Location.rb'
-require './lib/Scrapper.rb'
+require './lib/Scraper.rb'
 require './lib/BeerBuddy/CLI.rb'
