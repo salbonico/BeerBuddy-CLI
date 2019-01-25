@@ -1,7 +1,7 @@
 class Beer
 @@all =[]
 
-attr_accessor :name,:type,:apv,:ibu,:brewer,:description,:link_to_tocation
+attr_accessor :name,:type,:apv,:ibu,:brewer,:description
 
 def initialize(input)
 @name = input[:name]
@@ -10,8 +10,6 @@ def initialize(input)
 @ibu = input[:ibu]
 @brewer = input[:brewer]
 @description = input[:description]
-@link_to_tocation = input[:link_to_location]
-
 @@all << self
 end
 
