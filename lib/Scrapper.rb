@@ -9,15 +9,7 @@ class Scrapper
    output_of_hashes = []
 
    test_scrape = []
-   doc.css("h4 a").each do |url|
-   test_scrape << url.attribute("href")
-   end
-
-  second_test= []
-
-   test_scrape.each do |thing|
-   second_test << thing.value
- end
+   
 
 #beer name scrape
 imported_names = []
@@ -55,7 +47,17 @@ imported_descriptions = []
     imported_descriptions << description.text
 end
 
+#beer link to locations scrape
 
+full_url_scrap = []
+doc.css("h4 a").each do |url|
+full_url_scrap << url.attribute("href")
+end
+
+imported_link_to_locations = []
+full_url_scrap.each do |hash|
+imported_link_to_locations << hash.value
+end
 
    binding.pry
 end
