@@ -1,6 +1,6 @@
 require_relative '../config/environment'
 
-class Scrapper
+class Scraper
 
 
    def self.scrape_beers(url)
@@ -69,12 +69,14 @@ imported_names.each.with_index do |name,index|
   hash_entry[:description] = imported_descriptions[index]
   output_of_hashes << hash_entry
 end
+return output_of_hashes
 end
 
 
 ##testing url for beers
-self.scrape_beers("https://www.taphunter.com/search/?type=beers&near=94611")
+#self.scrape_beers("https://www.taphunter.com/search/?type=beers&near=94611")
 beer_test_url = "https://www.taphunter.com/search/?type=beers&near=94611"
+
 
 
 end
