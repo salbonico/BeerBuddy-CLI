@@ -29,12 +29,15 @@ def self.create_beers_by_url(url)
   input_hash = Scraper.scrape_beers(url)
   6.times {input_hash.pop}
   input_hash.each do |hash|
-    Beer.new(hash)
+    self.new(hash)
   end
-
 end
 
 def self.display_beers
+if @@all == []
+  puts "Oh no! You've found a beer desert!"
+  self.activate_buddy
+end
 index = 0
 until index == 10
 display_index = index + 1
@@ -44,8 +47,8 @@ end
 puts "Choose a number by the beer you want to learn more about!"
 input = gets.strip.to_i
 if input > 0 && input <11
-Beer.display_beer_details(input)
-else Beer.display_beers
+self.display_beer_details(input)
+else self.display_beers
 end
 end
 
@@ -63,22 +66,22 @@ puts "2) Enter a new location."
 puts "3) Exit"
 input = gets.strip.to_i
  if input == 1
-   Beer.display_beers
+   self.display_beers
  elsif input == 2
-   Beer.activate_buddy
+   self.activate_buddy
  elsif input == 3
    puts "Bye buddy!"
 else
-  Beer.display_beers
+  self.display_beers
 end
 end
 
 def self.activate_buddy
   puts "Hey buddy! Where are you? Enter a zip or town."
   location = gets.strip
-  url = Beer.create_url(location)
-  Beer.create_beers_by_url(url)
-  Beer.display_beers
+  url = self.create_url(location)
+  self.create_beers_by_url(url)
+  self.display_beers
 
 end
 
