@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-Let your BeerBuddy know the zip of where you are and BeerBuddy will list off some great beer choices, type in the number to the left of the beer that you have a good feeling about and hit enter and BeerBuddy will hook you up with all the details on that beer.
+Let your BeerBuddy know where you are and BeerBuddy will list off some great beer choices, type in the number to the left of the beer that you have a good feeling about and hit enter and BeerBuddy will hook you up with all the details on that beer.
 
 Happy Beering! And remember, an Uber is always cheeper than a DUI.  
 

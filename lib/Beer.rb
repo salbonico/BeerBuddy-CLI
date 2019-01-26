@@ -19,13 +19,18 @@ def self.all
 @@all
 end
 
+def self.all_clear
+  @@all.clear
+end
+
+
 def self.create_url(zip)
 return "https://www.taphunter.com/search/?type=beers&near=#{zip}"
 end
 
 
 def self.create_beers_by_url(url)
-  self.all.clear
+  self.all_clear
   input_hash = Scraper.scrape_beers(url)
   6.times {input_hash.pop}
   input_hash.each do |hash|
@@ -34,7 +39,7 @@ def self.create_beers_by_url(url)
 end
 
 def self.display_beers
-if @@all == []
+if self.all == []
   puts "Oh no! You've found a beer desert!"
   self.activate_buddy
 end
