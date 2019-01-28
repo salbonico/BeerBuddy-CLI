@@ -27,7 +27,8 @@ class CLI
     input = gets.strip.to_i
       if input > 0 && input <11
         self.display_beer_details(input)
-      else self.display_beers
+      else
+        self.display_beers
       end
   end
 
