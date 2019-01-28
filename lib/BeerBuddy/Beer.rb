@@ -1,5 +1,3 @@
-
-
 class Beer
   @@all =[]
 
@@ -16,13 +14,11 @@ class Beer
   end
 
   def self.all
-  @@all
+    @@all
   end
 
   def self.all_clear
     @@all.clear
   end
 
-
-  
 end
