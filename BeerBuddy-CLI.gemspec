@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "BeerBuddy/CLI/version"
+require "BeerBuddy/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "BeerBuddy-CLI"
-  spec.version       = BeerBuddy::CLI::VERSION
+  spec.version       = BeerBuddy::VERSION
   spec.authors       = ["'Steve Albonico'"]
   spec.email         = ["'salbonico@gmail.com'"]
 
