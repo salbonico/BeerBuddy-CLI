@@ -1,5 +1,3 @@
-
-
 class Scraper
 
    def self.scrape_beers(url)
@@ -9,40 +7,39 @@ class Scraper
 
      #beer name scrape
       imported_names = []
-      doc.css("h4").each do |name|
-        imported_names << name.text
-      end
+        doc.css("h4").each do |name|
+          imported_names << name.text
+        end
 
       #beer type scrape
       imported_types = []
-      doc.css("p:nth-child(2) span:nth-child(1)").each do |type|
-        imported_types << type.text
-      end
+        doc.css("p:nth-child(2) span:nth-child(1)").each do |type|
+          imported_types << type.text
+        end
 
       #beer APV scrape
       imported_apvs = []
-      doc.css("p:nth-child(2) span:nth-child(2)").each do |apv|
-        imported_apvs << apv.text
-      end
+        doc.css("p:nth-child(2) span:nth-child(2)").each do |apv|
+          imported_apvs << apv.text
+        end
 
       #beer IBU scrape
       imported_ibus = []
-      doc.css("p:nth-child(2) span:nth-child(3)").each do |ibu|
-        imported_ibus << ibu.text
-      end
+        doc.css("p:nth-child(2) span:nth-child(3)").each do |ibu|
+          imported_ibus << ibu.text
+        end
 
       #beer brewer scrape
       imported_brewers = []
-      doc.css("p:nth-child(3) span:nth-child(1)").each do |brewer|
-        imported_brewers << brewer.text
-      end
+        doc.css("p:nth-child(3) span:nth-child(1)").each do |brewer|
+          imported_brewers << brewer.text
+        end
 
       #beer description scrape
       imported_descriptions = []
-      doc.css("em").each do |description|
-        imported_descriptions << description.text
-      end
-
+        doc.css("em").each do |description|
+          imported_descriptions << description.text
+        end
 
       imported_names.each.with_index do |name,index|
         hash_entry = {}
@@ -57,12 +54,4 @@ class Scraper
 
     output_of_hashes
     end
-
-
-##testing url for beers
-#self.scrape_beers("https://www.taphunter.com/search/?type=beers&near=94611")
-beer_test_url = "https://www.taphunter.com/search/?type=beers&near=94611"
-
-
-
 end
